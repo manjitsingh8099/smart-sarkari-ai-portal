@@ -1,6 +1,7 @@
 
 import React, { useState } from 'react';
 import { Search, Menu, X, Bell } from 'lucide-react';
+import { SidebarTrigger } from '@/components/ui/sidebar';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -9,16 +10,19 @@ const Header = () => {
     <header className="bg-white/80 backdrop-blur-md border-b border-gray-200/50 sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
-          {/* Logo */}
-          <div className="flex-shrink-0">
-            <h1 className="text-2xl font-bold bg-gradient-to-r from-gray-900 to-gray-600 bg-clip-text text-transparent">
-              SarkariResult
-            </h1>
+          {/* Sidebar trigger and Logo */}
+          <div className="flex items-center space-x-4">
+            <SidebarTrigger className="lg:hidden" />
+            <div className="flex-shrink-0">
+              <h1 className="text-2xl font-bold bg-gradient-to-r from-gray-900 to-gray-600 bg-clip-text text-transparent">
+                SarkariResult
+              </h1>
+            </div>
           </div>
 
-          {/* Desktop Navigation */}
+          {/* Desktop Navigation - reduced items since main nav is in sidebar */}
           <nav className="hidden md:flex space-x-8">
-            {['Home', 'Latest Jobs', 'Results', 'Admissions', 'Syllabus', 'Answer Key'].map((item) => (
+            {['Syllabus', 'Notifications', 'About'].map((item) => (
               <a
                 key={item}
                 href="#"
@@ -57,7 +61,7 @@ const Header = () => {
         {isMenuOpen && (
           <div className="md:hidden py-4 border-t border-gray-200/50">
             <div className="flex flex-col space-y-2">
-              {['Home', 'Latest Jobs', 'Results', 'Admissions', 'Syllabus', 'Answer Key'].map((item) => (
+              {['Syllabus', 'Notifications', 'About'].map((item) => (
                 <a
                   key={item}
                   href="#"
