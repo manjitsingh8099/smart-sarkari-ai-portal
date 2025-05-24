@@ -36,7 +36,7 @@ export function AppSidebar() {
       : 'text-gray-600 hover:bg-gray-50 hover:text-gray-900';
 
   return (
-    <Sidebar className={collapsed ? 'w-14' : 'w-64'} collapsible>
+    <Sidebar className={collapsed ? 'w-14' : 'w-64'} collapsible="icon">
       <div className="p-4 border-b border-gray-200">
         <SidebarTrigger className="mb-2" />
         {!collapsed && (
