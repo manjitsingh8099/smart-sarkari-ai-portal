@@ -9,7 +9,7 @@ import Footer from '../components/Footer';
 const Index = () => {
   return (
     <SidebarProvider>
-      <div className="min-h-screen flex w-full bg-gradient-to-br from-gray-50 to-gray-100">
+      <div className="min-h-screen flex w-full bg-[#F7F7F8]">
         <AppSidebar />
         
         <div className="flex-1 flex flex-col">

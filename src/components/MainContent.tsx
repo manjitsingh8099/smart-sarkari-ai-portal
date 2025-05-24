@@ -43,8 +43,8 @@ const MainContent = () => {
           <div className="py-16">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
               <div className="text-center">
-                <h3 className="text-xl text-gray-600 mb-8">Answer keys will be displayed here</h3>
-                <p className="text-gray-500">Check back soon for the latest answer keys and solutions.</p>
+                <h3 className="text-xl text-[#2D2D2F] mb-8 font-inter font-medium">Answer keys will be displayed here</h3>
+                <p className="text-[#2D2D2F] opacity-70 font-inter">Check back soon for the latest answer keys and solutions.</p>
               </div>
             </div>
           </div>
@@ -54,8 +54,8 @@ const MainContent = () => {
           <div className="py-16">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
               <div className="text-center">
-                <h3 className="text-xl text-gray-600 mb-8">Select an option from the sidebar to view content</h3>
-                <p className="text-gray-500">Choose from Latest Jobs, Results, Admissions, or Answer Keys to get started.</p>
+                <h3 className="text-xl text-[#2D2D2F] mb-8 font-inter font-medium">Select an option from the sidebar to view content</h3>
+                <p className="text-[#2D2D2F] opacity-70 font-inter">Choose from Latest Jobs, Results, Admissions, or Answer Keys to get started.</p>
               </div>
             </div>
           </div>
@@ -64,10 +64,10 @@ const MainContent = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100">
+    <div className="min-h-screen bg-[#F7F7F8]">
       <div className="py-8">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h1 className="text-3xl font-bold text-gray-900 mb-8">{getPageTitle()}</h1>
+          <h1 className="text-3xl font-semibold text-[#2D2D2F] mb-8 font-inter">{getPageTitle()}</h1>
         </div>
       </div>
       {renderContent()}
