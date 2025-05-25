@@ -5,6 +5,7 @@ import { AppSidebar } from '@/components/AppSidebar';
 import Header from '../components/Header';
 import MainContent from '../components/MainContent';
 import Footer from '../components/Footer';
+import NewsPanel from '../components/NewsPanel';
 
 const Index = () => {
   return (
@@ -19,6 +20,8 @@ const Index = () => {
           </main>
           <Footer />
         </div>
+        
+        <NewsPanel />
       </div>
     </SidebarProvider>
   );
