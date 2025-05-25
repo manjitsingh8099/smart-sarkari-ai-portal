@@ -54,7 +54,7 @@ const NewsPanel = () => {
   };
 
   return (
-    <div className="w-80 bg-[#F7F7F8] border-l border-[#D1D5DB] h-screen overflow-y-auto">
+    <div className="w-80 bg-[#F7F7F8] border-l border-[#D1D5DB] h-screen overflow-y-auto flex-shrink-0">
       <div className="p-4 border-b border-[#D1D5DB]">
         <h2 className="text-lg font-semibold text-[#2D2D2F] font-inter">Latest News</h2>
         <p className="text-sm text-[#2D2D2F] opacity-70 font-inter">Stay updated with government job news</p>

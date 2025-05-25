@@ -13,7 +13,7 @@ const Index = () => {
       <div className="min-h-screen flex w-full bg-[#F7F7F8]">
         <AppSidebar />
         
-        <div className="flex-1 flex flex-col">
+        <div className="flex-1 flex flex-col min-w-0">
           <Header />
           <main className="flex-1">
             <MainContent />
