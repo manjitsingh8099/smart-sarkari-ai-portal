@@ -10,10 +10,10 @@ import NewsPanel from '../components/NewsPanel';
 const Index = () => {
   return (
     <SidebarProvider>
-      <div className="min-h-screen flex w-full bg-[#F7F7F8]">
+      <div className="min-h-screen flex flex-col lg:flex-row w-full bg-[#F7F7F8]">
         <AppSidebar />
         
-        <div className="flex-1 flex flex-col min-w-0">
+        <div className="flex-1 flex flex-col min-w-0 order-2 lg:order-none">
           <Header />
           <main className="flex-1">
             <MainContent />
@@ -21,7 +21,10 @@ const Index = () => {
           <Footer />
         </div>
         
-        <NewsPanel />
+        {/* News panel - hidden on mobile, visible on larger screens */}
+        <div className="hidden xl:block order-3">
+          <NewsPanel />
+        </div>
       </div>
     </SidebarProvider>
   );

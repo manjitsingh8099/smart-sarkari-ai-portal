@@ -37,16 +37,20 @@ export function AppSidebar() {
 
   return (
     <Sidebar className={collapsed ? 'w-14' : 'w-64'} collapsible="icon">
-      <div className="p-4 border-b border-[#D1D5DB] bg-[#F7F7F8]">
-        <SidebarTrigger className="mb-2" />
+      <div className="p-3 sm:p-4 border-b border-[#D1D5DB] bg-[#F7F7F8]">
+        <SidebarTrigger className="mb-2 h-8 w-8" />
         {!collapsed && (
-          <h2 className="text-lg font-semibold text-[#2D2D2F] font-inter">SarkariResult</h2>
+          <h2 className="text-base sm:text-lg font-semibold text-[#2D2D2F] font-inter truncate">
+            SarkariResult
+          </h2>
         )}
       </div>
 
       <SidebarContent className="bg-[#F7F7F8]">
         <SidebarGroup>
-          <SidebarGroupLabel className="text-[#2D2D2F] font-inter font-medium">Navigation</SidebarGroupLabel>
+          <SidebarGroupLabel className="text-[#2D2D2F] font-inter font-medium text-xs sm:text-sm">
+            Navigation
+          </SidebarGroupLabel>
           <SidebarGroupContent>
             <SidebarMenu>
               {navigationItems.map((item) => (
@@ -54,10 +58,16 @@ export function AppSidebar() {
                   <SidebarMenuButton asChild>
                     <NavLink
                       to={item.url}
-                      className={({ isActive }) => `flex items-center px-3 py-2 rounded-xl text-sm transition-colors font-inter ${getNavClass(isActive)}`}
+                      className={({ isActive }) => 
+                        `flex items-center px-3 py-3 sm:py-2 rounded-xl text-sm transition-colors font-inter touch-manipulation active:scale-95 ${getNavClass(isActive)}`
+                      }
                     >
-                      <item.icon className="h-5 w-5 mr-3" />
-                      {!collapsed && <span>{item.title}</span>}
+                      <item.icon className="h-5 w-5 mr-3 flex-shrink-0" />
+                      {!collapsed && (
+                        <span className="truncate text-sm sm:text-base">
+                          {item.title}
+                        </span>
+                      )}
                     </NavLink>
                   </SidebarMenuButton>
                 </SidebarMenuItem>
