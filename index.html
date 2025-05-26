@@ -1,26 +1,533 @@
+
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>smart-sarkari-ai-portal</title>
-    <meta name="description" content="Lovable Generated Project" />
-    <meta name="author" content="Lovable" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SarkariResult - Government Jobs Portal</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Mobile Menu Overlay -->
+    <div id="mobile-overlay" class="mobile-overlay"></div>
+    
+    <!-- Sidebar -->
+    <aside id="sidebar" class="sidebar">
+        <div class="sidebar-header">
+            <button id="sidebar-toggle" class="sidebar-toggle">
+                <i class="fas fa-bars"></i>
+            </button>
+            <h2 class="sidebar-title">SarkariResult</h2>
+        </div>
+        
+        <nav class="sidebar-nav">
+            <div class="nav-group-label">Navigation</div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="#" class="nav-link active" data-page="home">
+                        <i class="fas fa-home"></i>
+                        <span>Home</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link" data-page="jobs">
+                        <i class="fas fa-briefcase"></i>
+                        <span>Latest Jobs</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link" data-page="results">
+                        <i class="fas fa-file-text"></i>
+                        <span>Results</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link" data-page="admissions">
+                        <i class="fas fa-graduation-cap"></i>
+                        <span>Admissions</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link" data-page="answer-keys">
+                        <i class="fas fa-key"></i>
+                        <span>Answer Keys</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </aside>
 
-    <meta property="og:title" content="smart-sarkari-ai-portal" />
-    <meta property="og:description" content="Lovable Generated Project" />
-    <meta property="og:type" content="website" />
-    <meta property="og:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
+    <!-- Main Container -->
+    <div class="main-container">
+        <!-- Header -->
+        <header class="header">
+            <button id="mobile-menu-toggle" class="mobile-menu-toggle">
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="header-content">
+                <h1 id="page-title">Welcome to SarkariResult</h1>
+            </div>
+            <button id="news-toggle" class="news-toggle">
+                <i class="fas fa-newspaper"></i>
+            </button>
+        </header>
 
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:site" content="@lovable_dev" />
-    <meta name="twitter:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
-  </head>
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Home Page -->
+            <div id="home-page" class="page active">
+                <div class="welcome-message">
+                    <h3>Select an option from the sidebar to view content</h3>
+                    <p>Choose from Latest Jobs, Results, Admissions, or Answer Keys to get started.</p>
+                </div>
+            </div>
 
-  <body>
-    <div id="root"></div>
-    <!-- IMPORTANT: DO NOT REMOVE THIS SCRIPT TAG OR THIS VERY COMMENT! -->
-    <script src="https://cdn.gpteng.co/gptengineer.js" type="module"></script>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
+            <!-- Jobs Page -->
+            <div id="jobs-page" class="page">
+                <!-- Job Categories -->
+                <section class="job-categories">
+                    <h2>Job Categories</h2>
+                    <p>Explore opportunities across various government sectors</p>
+                    <div class="categories-grid">
+                        <div class="category-card">
+                            <div class="category-icon banking">
+                                <i class="fas fa-university"></i>
+                            </div>
+                            <h3>Banking</h3>
+                            <p class="count">45</p>
+                            <span>Active Jobs</span>
+                        </div>
+                        <div class="category-card">
+                            <div class="category-icon defence">
+                                <i class="fas fa-shield-alt"></i>
+                            </div>
+                            <h3>Defence</h3>
+                            <p class="count">32</p>
+                            <span>Active Jobs</span>
+                        </div>
+                        <div class="category-card">
+                            <div class="category-icon teaching">
+                                <i class="fas fa-chalkboard-teacher"></i>
+                            </div>
+                            <h3>Teaching</h3>
+                            <p class="count">67</p>
+                            <span>Active Jobs</span>
+                        </div>
+                        <div class="category-card">
+                            <div class="category-icon medical">
+                                <i class="fas fa-stethoscope"></i>
+                            </div>
+                            <h3>Medical</h3>
+                            <p class="count">28</p>
+                            <span>Active Jobs</span>
+                        </div>
+                        <div class="category-card">
+                            <div class="category-icon railway">
+                                <i class="fas fa-train"></i>
+                            </div>
+                            <h3>Railway</h3>
+                            <p class="count">89</p>
+                            <span>Active Jobs</span>
+                        </div>
+                        <div class="category-card">
+                            <div class="category-icon central">
+                                <i class="fas fa-building"></i>
+                            </div>
+                            <h3>Central Govt</h3>
+                            <p class="count">156</p>
+                            <span>Active Jobs</span>
+                        </div>
+                        <div class="category-card">
+                            <div class="category-icon state">
+                                <i class="fas fa-users"></i>
+                            </div>
+                            <h3>State Govt</h3>
+                            <p class="count">234</p>
+                            <span>Active Jobs</span>
+                        </div>
+                        <div class="category-card">
+                            <div class="category-icon research">
+                                <i class="fas fa-flask"></i>
+                            </div>
+                            <h3>Research</h3>
+                            <p class="count">23</p>
+                            <span>Active Jobs</span>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Latest Updates -->
+                <section class="latest-updates">
+                    <div class="section-header">
+                        <h2>Latest Updates</h2>
+                        <button class="view-all-btn">
+                            View All <i class="fas fa-arrow-right"></i>
+                        </button>
+                    </div>
+                    <div class="updates-grid">
+                        <div class="update-card">
+                            <div class="update-header">
+                                <div class="badges">
+                                    <span class="badge banking">Banking</span>
+                                    <span class="badge new">NEW</span>
+                                    <i class="fas fa-star important"></i>
+                                </div>
+                                <div class="date">
+                                    <i class="fas fa-clock"></i>
+                                    2024-05-23
+                                </div>
+                            </div>
+                            <h3>IBPS Clerk Recruitment 2024 - 6128 Posts</h3>
+                            <div class="update-footer">
+                                <button class="read-more">Read More</button>
+                                <i class="fas fa-arrow-right"></i>
+                            </div>
+                        </div>
+                        <div class="update-card">
+                            <div class="update-header">
+                                <div class="badges">
+                                    <span class="badge result">Result</span>
+                                    <span class="badge new">NEW</span>
+                                </div>
+                                <div class="date">
+                                    <i class="fas fa-clock"></i>
+                                    2024-05-22
+                                </div>
+                            </div>
+                            <h3>SSC CHSL Result 2024 Declared</h3>
+                            <div class="update-footer">
+                                <button class="read-more">Read More</button>
+                                <i class="fas fa-arrow-right"></i>
+                            </div>
+                        </div>
+                        <div class="update-card">
+                            <div class="update-header">
+                                <div class="badges">
+                                    <span class="badge admit-card">Admit Card</span>
+                                    <i class="fas fa-star important"></i>
+                                </div>
+                                <div class="date">
+                                    <i class="fas fa-clock"></i>
+                                    2024-05-21
+                                </div>
+                            </div>
+                            <h3>Railway Group D Admit Card 2024</h3>
+                            <div class="update-footer">
+                                <button class="read-more">Read More</button>
+                                <i class="fas fa-arrow-right"></i>
+                            </div>
+                        </div>
+                        <div class="update-card">
+                            <div class="update-header">
+                                <div class="badges">
+                                    <span class="badge answer-key">Answer Key</span>
+                                    <i class="fas fa-star important"></i>
+                                </div>
+                                <div class="date">
+                                    <i class="fas fa-clock"></i>
+                                    2024-05-20
+                                </div>
+                            </div>
+                            <h3>UPSC Civil Services Prelims 2024 Answer Key</h3>
+                            <div class="update-footer">
+                                <button class="read-more">Read More</button>
+                                <i class="fas fa-arrow-right"></i>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <!-- Results Page -->
+            <div id="results-page" class="page">
+                <section class="results-section">
+                    <div class="section-header">
+                        <div>
+                            <h2>Latest Results</h2>
+                            <p>Check your exam results and download scorecards</p>
+                        </div>
+                        <div class="live-updates">
+                            <i class="fas fa-chart-line"></i>
+                            <span>Live Updates</span>
+                        </div>
+                    </div>
+                    <div class="results-grid">
+                        <div class="result-card">
+                            <div class="result-header">
+                                <div class="result-info">
+                                    <div class="result-icon">
+                                        <i class="fas fa-award"></i>
+                                    </div>
+                                    <div>
+                                        <h3>SSC MTS Result 2024</h3>
+                                        <p>Staff Selection Commission</p>
+                                    </div>
+                                </div>
+                                <span class="badge final">Final Result</span>
+                            </div>
+                            <div class="result-details">
+                                <div class="detail">
+                                    <i class="fas fa-calendar"></i>
+                                    <span>2024-05-20</span>
+                                </div>
+                                <div class="detail">
+                                    <i class="fas fa-award"></i>
+                                    <span>45,678 candidates</span>
+                                </div>
+                            </div>
+                            <div class="result-actions">
+                                <button class="check-result">Check Result</button>
+                                <button class="download-btn">
+                                    <i class="fas fa-download"></i>
+                                    Download
+                                </button>
+                            </div>
+                        </div>
+                        <div class="result-card">
+                            <div class="result-header">
+                                <div class="result-info">
+                                    <div class="result-icon">
+                                        <i class="fas fa-award"></i>
+                                    </div>
+                                    <div>
+                                        <h3>IBPS PO Prelims Result 2024</h3>
+                                        <p>Institute of Banking Personnel Selection</p>
+                                    </div>
+                                </div>
+                                <span class="badge prelims">Prelims Result</span>
+                            </div>
+                            <div class="result-details">
+                                <div class="detail">
+                                    <i class="fas fa-calendar"></i>
+                                    <span>2024-05-18</span>
+                                </div>
+                                <div class="detail">
+                                    <i class="fas fa-award"></i>
+                                    <span>67,890 candidates</span>
+                                </div>
+                            </div>
+                            <div class="result-actions">
+                                <button class="check-result">Check Result</button>
+                                <button class="download-btn">
+                                    <i class="fas fa-download"></i>
+                                    Download
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <!-- Admissions Page -->
+            <div id="admissions-page" class="page">
+                <section class="admissions-section">
+                    <h2>Admissions & Entrance Exams</h2>
+                    <p>Apply for top government colleges and institutions across India</p>
+                    <div class="admissions-grid">
+                        <div class="admission-card">
+                            <div class="admission-header">
+                                <div class="admission-info">
+                                    <div class="admission-icon">
+                                        <i class="fas fa-book-open"></i>
+                                    </div>
+                                    <div>
+                                        <h3>NEET UG 2024 Application</h3>
+                                        <p>National Testing Agency</p>
+                                    </div>
+                                </div>
+                                <span class="badge open">Open</span>
+                            </div>
+                            <div class="admission-details">
+                                <div class="detail-row">
+                                    <div class="detail">
+                                        <p class="label">Last Date</p>
+                                        <p class="value">
+                                            <i class="fas fa-calendar"></i>
+                                            2024-06-15
+                                        </p>
+                                    </div>
+                                    <div class="detail">
+                                        <p class="label">Total Seats</p>
+                                        <p class="value">
+                                            <i class="fas fa-users"></i>
+                                            1,08,940
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="detail-row">
+                                    <div class="detail">
+                                        <p class="label">Eligibility</p>
+                                        <p class="value">12th Pass with PCB</p>
+                                    </div>
+                                    <div class="detail">
+                                        <p class="label">Application Fee</p>
+                                        <p class="value">₹1,700</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="admission-actions">
+                                <button class="apply-now">
+                                    Apply Now
+                                    <i class="fas fa-external-link-alt"></i>
+                                </button>
+                                <button class="view-details">View Details</button>
+                            </div>
+                        </div>
+                        <div class="admission-card">
+                            <div class="admission-header">
+                                <div class="admission-info">
+                                    <div class="admission-icon">
+                                        <i class="fas fa-book-open"></i>
+                                    </div>
+                                    <div>
+                                        <h3>JEE Main 2024 Session 2</h3>
+                                        <p>National Testing Agency</p>
+                                    </div>
+                                </div>
+                                <span class="badge open">Open</span>
+                            </div>
+                            <div class="admission-details">
+                                <div class="detail-row">
+                                    <div class="detail">
+                                        <p class="label">Last Date</p>
+                                        <p class="value">
+                                            <i class="fas fa-calendar"></i>
+                                            2024-06-10
+                                        </p>
+                                    </div>
+                                    <div class="detail">
+                                        <p class="label">Total Seats</p>
+                                        <p class="value">
+                                            <i class="fas fa-users"></i>
+                                            1,25,000
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="detail-row">
+                                    <div class="detail">
+                                        <p class="label">Eligibility</p>
+                                        <p class="value">12th Pass with PCM</p>
+                                    </div>
+                                    <div class="detail">
+                                        <p class="label">Application Fee</p>
+                                        <p class="value">₹1,000</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="admission-actions">
+                                <button class="apply-now">
+                                    Apply Now
+                                    <i class="fas fa-external-link-alt"></i>
+                                </button>
+                                <button class="view-details">View Details</button>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <!-- Answer Keys Page -->
+            <div id="answer-keys-page" class="page">
+                <div class="welcome-message">
+                    <h3>Answer keys will be displayed here</h3>
+                    <p>Check back soon for the latest answer keys and solutions.</p>
+                </div>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#">Latest Jobs</a></li>
+                        <li><a href="#">Results</a></li>
+                        <li><a href="#">Admit Cards</a></li>
+                        <li><a href="#">Answer Keys</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Categories</h3>
+                    <ul>
+                        <li><a href="#">Banking Jobs</a></li>
+                        <li><a href="#">Railway Jobs</a></li>
+                        <li><a href="#">SSC Jobs</a></li>
+                        <li><a href="#">UPSC Jobs</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact Info</h3>
+                    <div class="contact-info">
+                        <p><i class="fas fa-envelope"></i> info@sarkariresult.com</p>
+                        <p><i class="fas fa-phone"></i> +91 98765 43210</p>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Follow Us</h3>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 SarkariResult. All rights reserved.</p>
+            </div>
+        </footer>
+    </div>
+
+    <!-- News Panel -->
+    <div id="news-panel" class="news-panel">
+        <div class="news-header">
+            <h2>Latest News</h2>
+            <p>Stay updated with government job news</p>
+            <button id="close-news" class="close-news">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <div class="news-content">
+            <div class="news-item">
+                <div class="news-badges">
+                    <span class="badge result">Result</span>
+                    <span class="badge breaking">BREAKING</span>
+                </div>
+                <h3>IBPS PO Result 2024 Released</h3>
+                <div class="news-time">
+                    <i class="fas fa-clock"></i>
+                    2 hours ago
+                </div>
+            </div>
+            <div class="news-item">
+                <div class="news-badges">
+                    <span class="badge recruitment">Recruitment</span>
+                </div>
+                <h3>SSC CGL 2024 Notification Out</h3>
+                <div class="news-time">
+                    <i class="fas fa-clock"></i>
+                    4 hours ago
+                </div>
+            </div>
+            <div class="news-item">
+                <div class="news-badges">
+                    <span class="badge exam">Exam</span>
+                </div>
+                <h3>Railway RRB NTPC Exam Date Announced</h3>
+                <div class="news-time">
+                    <i class="fas fa-clock"></i>
+                    6 hours ago
+                </div>
+            </div>
+        </div>
+        <div class="news-footer">
+            <button class="view-all-news">View All News</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
 </html>
