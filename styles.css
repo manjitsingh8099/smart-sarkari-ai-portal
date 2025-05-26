@@ -8,7 +8,7 @@
 
 body {
     font-family: 'Inter', sans-serif;
-    background-color: #B6B6B6;
+    background-color: #B0C9CD;
     color: #2D2D2F;
     line-height: 1.6;
 }
@@ -33,7 +33,7 @@ body {
     left: 0;
     width: 256px;
     height: 100vh;
-    background-color: #B6B6B6;
+    background-color: #B0C9CD;
     border-right: 1px solid #D1D5DB;
     z-index: 1000;
     transition: width 0.3s ease;
